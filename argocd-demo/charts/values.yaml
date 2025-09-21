@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: hashicorp/http-echo
+  tag: "0.2.3"
+  pullPolicy: IfNotPresent
+
+message: "Hola desde Helm + Argo CD"
+service:
+  type: ClusterIP
+  port: 5678
+
+ingress:
+  enabled: false
+  className: ""
+  hosts:
+    - host: hello.local
+      path: /
+  tls: [] 

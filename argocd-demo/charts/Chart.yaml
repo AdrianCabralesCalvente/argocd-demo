@@ -1,0 +1,6 @@
+apiVersion: v2
+name: hello-msg
+description: Simple chart que expone un mensaje vía HTTP (hashicorp/http-echo)
+type: application
+version: 0.1.0
+appVersion: "0.2.3"

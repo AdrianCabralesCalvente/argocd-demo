@@ -1,0 +1,6 @@
+1. Acceder por port-forward:
+   kubectl port-forward svc/{{ .Release.Name }} 8080:{{ .Values.service.port }} -n {{ .Release.Namespace }}
+   curl http://localhost:8080/
+
+2. Cambiar el mensaje:
+   helm upgrade {{ .Release.Name }} . -n {{ .Release.Namespace }} --set message="Nuevo mensaje"
